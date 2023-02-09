@@ -1,14 +1,13 @@
 #include "rawPacket.h" 
 
-rawPacket::rawPacket(rawPacketInfo * info, string value) : packet(value)
-{
-    this->rawInfo.srcAddress = info->srcAddress; 
-    this->rawInfo.dstAddress = info->dstAddress; 
-    this->rawInfo.crc = info->crc; 
-    this->rawInfo.type = info->type; 
-}
+rawPacket::rawPacket(string value) : packet(value){}
 
-rawPacketInfo rawPacket::getInfo()
+rawPacketInfo rawPacket::getRawInfo()
 {
     return this->rawInfo;
+}
+
+void rawPacket::setRawInfo(rawPacketInfo rawInfo)
+{
+    this->rawInfo = rawInfo; 
 }

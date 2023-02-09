@@ -12,6 +12,7 @@ class ecpriPacket:rawPacket{
     private:
         ecpriPacketInfo ecpriInfo; 
     public: 
-        ecpriPacket(ecpriPacketInfo * ecpriInfo,rawPacketInfo * rawInfo, string value);
+        ecpriPacket(string value);
         ecpriPacketInfo getEcpriInfo(); 
+        void setEcpriInfo(ecpriPacketInfo); 
 }; 

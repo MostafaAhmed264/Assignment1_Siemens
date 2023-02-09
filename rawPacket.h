@@ -13,6 +13,7 @@ class rawPacket:packet{
     private:
         rawPacketInfo rawInfo; 
     public: 
-        rawPacket(rawPacketInfo * info, string value);
-        rawPacketInfo getInfo(); 
+        rawPacket(string value);
+        rawPacketInfo getRawInfo(); 
+        void setRawInfo(rawPacketInfo); 
 };
