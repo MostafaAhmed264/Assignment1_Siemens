@@ -9,7 +9,7 @@ typedef struct{
     string type; 
 }rawPacketInfo; 
 
-class rawPacket:packet{
+class rawPacket:public packet{
     private:
         rawPacketInfo rawInfo; 
     public: 
