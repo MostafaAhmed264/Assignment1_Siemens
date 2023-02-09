@@ -8,7 +8,7 @@ typedef struct{
     string sequenceID; 
 }ecpriPacketInfo; 
 
-class ecpriPacket:rawPacket{
+class ecpriPacket:public rawPacket{
     private:
         ecpriPacketInfo ecpriInfo; 
     public: 
