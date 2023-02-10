@@ -16,4 +16,5 @@ class rawPacket:public packet{
         rawPacket(string value);
         rawPacketInfo getRawInfo(); 
         void setRawInfo(rawPacketInfo); 
+        virtual void accept(visitor &v);
 };

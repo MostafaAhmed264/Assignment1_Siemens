@@ -15,4 +15,5 @@ class ecpriPacket:public rawPacket{
         ecpriPacket(string value);
         ecpriPacketInfo getEcpriInfo(); 
         void setEcpriInfo(ecpriPacketInfo); 
+        void accept(visitor &v);
 }; 

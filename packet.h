@@ -8,4 +8,5 @@ class packet{
         packet(std::string value);
         //getter for value
         std::string getValue(); 
+        virtual void accept(class visitor &v) = 0;
 }; 
