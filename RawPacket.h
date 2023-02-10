@@ -1,4 +1,4 @@
-#include "packet.h"
+#include "Packet.h"
 using std::string; 
 
 /*a struct containing the information about the packet*/
@@ -9,12 +9,12 @@ typedef struct{
     string type; 
 }rawPacketInfo; 
 
-class rawPacket:public packet{
+class RawPacket:public Packet{
     private:
         rawPacketInfo rawInfo; 
     public: 
-        rawPacket(string value);
+        RawPacket(string value);
         rawPacketInfo getRawInfo(); 
         void setRawInfo(rawPacketInfo); 
-        virtual void accept(visitor &v);
+        virtual void accept(Visitor &v);
 };

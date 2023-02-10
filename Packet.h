@@ -1,12 +1,12 @@
 #include <string>
 
-class packet{ 
+class Packet{ 
     private: 
         std::string value; 
     public: 
         //Constructor using a string that can be read from the file
-        packet(std::string value);
+        Packet(std::string value);
         //getter for value
         std::string getValue(); 
-        virtual void accept(class visitor &v) = 0;
+        virtual void accept(class Visitor &v) = 0;
 }; 

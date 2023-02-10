@@ -1,4 +1,4 @@
-#include "visitor.h"
+#include "Visitor.h"
 #define DSTADDR_IDX (16)
 #define DST_SIZE    (12) //12 hexa char represnting 6 bytes of Destination
 #define SRCADDR_IDX (28)
@@ -8,6 +8,7 @@
 #define CRC_SIZE (8)
 #define ECPRI_PROTOCOL_IDX (44)
 #define ECPRI_PROTOCOL_SIZE (1) 
+#define ECPRI_CI (45)
 #define ECPRI_MESSAGE_TYPE_IDX (46)
 #define ECPRI_MESSAGE_TYPE_SIZE (2) 
 #define ECPRI_PAYLOAD_SIZE_IDX (48)
@@ -17,8 +18,8 @@
 #define ECPRI_SEQ_ID_IDX (56)
 #define ECPRI_SEQ_ID_SIZE (4)
 //packetParser visitor contaning two parsing functions for the two different packets types.
-class packetParser : public visitor
+class PacketParser : public Visitor
 {
-    void visitRawPacket(rawPacket * rp);
-    void visitEcrpiPacket(ecpriPacket * ep);    
+    void visitRawPacket(RawPacket * rp);
+    void visitEcrpiPacket(EcpriPacket * ep);    
 };
